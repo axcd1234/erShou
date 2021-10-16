@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/backstage.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script>
+      $(function(){
+        $("#btn5").click(function(){
+            $(".main1").fadeIn();
+        });
+        $(".close1").click(function(){
+            $(".main1").fadeOut();
+            var id1 = document.getElementById("id1");
+            var num1 = document.getElementById("num1");
+            var a1 = document.getElementById("a1");
+            var a2 = document.getElementById("a2");
+            var a3 = document.getElementById("a3");
+            var a4 = document.getElementById("a4");
+            var a5 = document.getElementById("a5");
+            var a6 = document.getElementById("a6");
+            var a7 = document.getElementById("a7");
+            var a8 = document.getElementById("a8");
+            var a9 = document.getElementById("a9");
+            var a10 = document.getElementById("a10");
+            var a11 = document.getElementById("a11");
+            var a12 = document.getElementById("a12");
+            $ajax({
+                method: "post",
+                url: "backstage.php",
+                data: {
+                    id: id1.value,
+                    num: num1.value
+                },
+                success: function(result){
+                    if(id1.value == 1){
+                        a1.innerHTML = num1.value;
+                    }
+                    if(id1.value == 2){
+                        a2.innerHTML = num1.value;
+                    }
+                    if(id1.value == 3){
+                        a3.innerHTML = num1.value;
+                    }
+                    if(id1.value == 4){
+                        a4.innerHTML = num1.value;
+                    }
+                    if(id1.value == 5){
+                        a5.innerHTML = num1.value;
+                    }
+                    if(id1.value == 6){
+                        a6.innerHTML = num1.value;
+                    }
+                    if(id1.value == 7){
+                        a7.innerHTML = num1.value;
+                    }
+                    if(id1.value == 8){
+                        a8.innerHTML = num1.value;
+                    }
+                    if(id1.value == 9){
+                        a9.innerHTML = num1.value;
+                    }
+                    if(id1.value == 10){
+                        a10.innerHTML = num1.value;
+                    }
+                    if(id1.value == 11){
+                        a11.innerHTML = num1.value;
+                    }
+                    if(id1.value == 12){
+                        a12.innerHTML = num1.value;
+                    }
+                },
+                error: function(msg){
+                    alert(msg);
+                }
+            })
+        });
+        $("#btn6").click(function(){
+            $(".main2").fadeIn();
+        });
+        $(".close2").click(function(){
+            $(".main2").fadeOut();
+            var id2 = document.getElementById("id2");
+            var tr1 = document.getElementById("tr1");
+            var tr2 = document.getElementById("tr2");
+            var tr3 = document.getElementById("tr3");
+            var tr4 = document.getElementById("tr4");
+            var tr5 = document.getElementById("tr5");
+            var tr6 = document.getElementById("tr6");
+            var tr7 = document.getElementById("tr7");
+            var tr8 = document.getElementById("tr8");
+            var tr9 = document.getElementById("tr9");
+            var tr10 = document.getElementById("tr10");
+            var tr11 = document.getElementById("tr11");
+            var tr12 = document.getElementById("tr12");
+            $ajax({
+                method: "post",
+                url: "delete.php",
+                data: {
+                    shanId: id2.value
+                },
+                success: function(result){
+                    if(id2.value == 1){
+                        tr1.style.display = "none";
+                    }
+                    if(id2.value == 2){
+                        tr2.style.display = "none";
+                    }
+                    if(id2.value == 3){
+                        tr3.style.display = "none";
+                    }
+                    if(id2.value == 4){
+                        tr4.style.display = "none";
+                    }
+                    if(id2.value == 5){
+                        tr5.style.display = "none";
+                    }
+                    if(id2.value == 6){
+                        tr6.style.display = "none";
+                    }
+                    if(id2.value == 7){
+                        tr7.style.display = "none";
+                    }
+                    if(id2.value == 8){
+                        tr8.style.display = "none";
+                    }
+                    if(id2.value == 9){
+                        tr9.style.display = "none";
+                    }
+                    if(id2.value == 10){
+                        tr10.style.display = "none";
+                    }
+                    if(id2.value == 11){
+                        tr11.style.display = "none";
+                    }
+                    if(id2.value == 12){
+                        tr12.style.display = "none";
+                    }
+                },
+                error: function(msg){
+                    alert(msg);
+                }
+            })
+        });
+        $("#btn7").click(function(){
+            $(".main3").fadeIn();
+        });
+        $(".close3").click(function(){
+            $(".main3").fadeOut();
+            var id3 = document.getElementById("id3");
+            var id4 = document.getElementById("id4");
+            var id5 = document.getElementById("id5");
+            var id6 = document.getElementById("id6");
+            $ajax({
+                method: "post",
+                url: "new.php",
+                data: {
+                    new1: id3.value,
+                    new2: id4.value,
+                    new3: id5.value,
+                    new4: id6.value
+                },
+                success: function(result){
+                    
+                },
+                error: function(msg){
+                    alert(msg);
+                }
+            })
+        });
+      });
+    </script>
+    <style>
+    .search .main1{
+        display: none;
+        z-index: 10;
+    }
+    .search .main2{
+        display: none;
+        z-index: 10;
+        /* height: 140px; */
+    }
+    .search .main3{
+        display: none;
+        z-index: 10;
+    }
+    .search .mainbox{
+        width: 360px;
+        height: auto;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -400px;
+        margin-top: 80px;
+        box-shadow: 0 1px 5px #aaa;
+        border-radius: 4px;
+        z-index: 1000;
+    }
+    .search .new{
+        width: 50px;
+        height: 30px;
+        margin: 10px 0 0 10px;
+        line-height: 26px;
+    }
+    </style>
+</head>
+<body>
+    <div class="page-main">
+        <div class="left">
+            <div class="top-title">
+                <p>后台管理系统</p>
+            </div>
+            <div class="user">
+                <div class="img">
+                    <img src="img/logo.jpg" alt ="">
+                </div>
+                <div class="text">
+                    <p class="name">admin</p>
+                    <span class="success"></span>
+                    <span class="two">在线</span>
+                    <span class="quit iconfont icontuichudenglu"></span>
+                    <span class="three">注销</span>
+                    <a href="login.html" class="three">注销</a>
+                </div>
+            </div>
+            <div class="nav">
+                <ul class="list">
+                    <li>
+                        <span id="first" class="font iconfont icondengluyonghu"></span>
+                        <a id="first" href="">商品管理</a>
+                    </li>
+                    <li>
+                        <span class="font iconfont icondengluyonghu"></span>
+                        <a href="">待填管理</a>
+                    </li>
+                    <li>
+                        <span class="font iconfont icondengluyonghu"></span>
+                        <a href="">待填管理</a>
+                    </li>
+                    <li>
+                        <span class="font iconfont icondengluyonghu"></span>
+                        <a href="">待填管理</a>
+                    </li>
+                    <li>
+                        <span class="font iconfont icondengluyonghu"></span>
+                        <a href="">待填管理</a>
+                    </li>
+                    <li>
+                        <span class="font iconfont icondengluyonghu"></span>
+                        <a href="">待填管理</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-list">
+            <div class="nav-bar">
+                <a class="iconfont iconshouqicaidan" id="btn" href=""></a>
+            </div>
+            <ul class="list">
+                <li>
+                    <span class="font iconfont iconxiangji"></span>
+                    <a href="">功能区1</a>
+                </li>
+                <li>
+                    <span class="font iconfont iconxiangji"></span>
+                    <a href="">功能区2</a>
+                </li>
+                <li>
+                    <span class="font iconfont iconxiangji"></span>
+                    <a href="">功能区3</a>
+                </li>
+                <li>
+                    <span class="font iconfont iconxiangji"></span>
+                    <a href="">功能区4</a>
+                </li>
+            </ul>
+        </div>
+        <div class="history">
+            <div class="left"><i class="iconfont iconLeftxiangzuo34"></i></div>
+            <div class="right"><i class="iconfont iconRightxiangyou36"></i></div>
+            <ul class="list">
+                <li>
+                    <a href="">首页</a>
+                </li>
+            </ul>
+        </div>
+        <div style="z-index: 10;" class="search">
+            <div class="main1">
+                <div class="mainbox">
+                    <div id="title" class="panel-primary">
+                        <div class="panel-heading">修改商品数量</div>
+                    </div>
+                    <div class="form-group">
+                        <label style="margin-left: 10px;" for="exampleInputName2">商品ID：</label>
+                        <input style="width: 340px; margin-left: 10px;" type="text" class="form-control" id="id1" placeholder="请输入商品ID">
+                        <label style="margin: 10px 0 8px 10px;" for="exampleInputName2">修改：</label>
+                        <input style="width: 340px; margin-left: 10px;" type="text" class="form-control" id="num1" placeholder="请输入新的数量">
+                    </div>
+                    <a style="margin: 0 0 15px 155px;" href="javascript:;" class="btn btn-info close1">提交</a>
+                </div>
+            </div>
+            <div class="main2">
+                <div class="mainbox">
+                    <div id="title" class="panel-primary">
+                        <div class="panel-heading">删除商品数量</div>
+                    </div>
+                    <div class="form-group">
+                        <label style="margin-left: 10px;" for="exampleInputName2">删除：</label>
+                        <input id="id2" style="width: 340px; margin-left: 10px;" type="text" class="form-control" placeholder="请输入要删除的商品ID">
+                    </div>
+                    <a style="margin: 0 0 15px 154px;" href="javascript:;" class="btn btn-danger close2">提交</a>
+                </div>
+            </div>
+            <div class="main3">
+                <div class="mainbox">
+                    <div id="title" class="panel-primary">
+                        <div class="panel-heading">新增商品数量</div>
+                    </div>
+                    <div class="form-group">
+                        <label style="margin-left: 10px;" for="exampleInputName2">商品ID：</label>
+                        <input id="id3" style="width: 340px; margin-left: 10px;" type="text" class="form-control" placeholder="请输入商品ID">
+                        <label style="margin: 10px 0 4px 10px;" for="exampleInputName2">商品名称：</label>
+                        <input id="id4" style="width: 340px; margin-left: 10px;" type="text" class="form-control" placeholder="请输入商品名称">
+                        <label style="margin: 10px 0 4px 10px;" for="exampleInputName2">单价：</label>
+                        <input id="id5" style="width: 340px; margin-left: 10px;" type="text" class="form-control" placeholder="请输入商品单价">
+                        <label style="margin: 10px 0 4px 10px;" for="exampleInputName2">数量：</label>
+                        <input id="id6" style="width: 340px; margin-left: 10px;" type="text" class="form-control" placeholder="请输入商品数量">
+                    </div>
+                    <a style="margin: 0 0 15px 154px;" href="javascript:;" class="btn btn-success close3">提交</a>
+                </div>
+            </div>
+            <a id="btn5" class="new btn btn-info btn-xs iconfont iconxiugai" href="javascript:;">修改</a>
+            <a id="btn6" class="new btn btn-danger btn-xs iconfont iconshanchu" href="javascript:;">删除</a>
+            <a id="btn7" class="new btn btn-success btn-xs iconfont iconzengjia" href="javascript:;">增加</a>
+            <a id="btn8" class="new btn btn-warning btn-xs iconfont iconzengjia" href="javascript:;">查询</a>
+        </div>
+        <div class="banner">
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead style="background-color: #eff3f8;">
+                        <tr>
+                            <th>商品ID</th>
+                            <th>商品名称</th>
+                            <th>单价（元）</th>
+                            <th>数量（个）</th>
+                            <th>总价（元）</th>
+                            <th>利润（利润率：10%）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="tr1">
+                            <th>1</th>
+                            <td>迷你风扇</td>
+                            <td id="price">30</td>
+                            <td id="a1">10</td>
+                            <td id="sum">300</td>
+                            <td id="profit">30</td>
+                        </tr>
+                        <tr id="tr2">
+                            <th>2</th>
+                            <td>短袖</td>
+                            <td>89</td>
+                            <td id="a2" >10</td>
+                            <td>890</td>
+                            <td>89</td>
+                        </tr>
+                        <tr id="tr3">
+                            <th>3</th>
+                            <td>短裤</td>
+                            <td>49</td>
+                            <td id="a3">10</td>
+                            <td>490</td>
+                            <td>49</td>
+                        </tr>
+                        <tr id="tr4">
+                            <th>4</th>
+                            <td>华为荣耀9x</td>
+                            <td>999</td>
+                            <td id="a4">10</td>
+                            <td>9990</td>
+                            <td>999</td>
+                        </tr>
+                        <tr id="tr5">
+                            <th>5</th>
+                            <td>老北京布鞋</td>
+                            <td>9.9</td>
+                            <td id="a5">10</td>
+                            <td>99</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr id="tr6">
+                            <th>6</th>
+                            <td>枕头</td>
+                            <td>29</td>
+                            <td id="a6">10</td>
+                            <td>290</td>
+                            <td>29</td>
+                        </tr>
+                        <tr id="tr7">
+                            <th>7</th>
+                            <td>猪肉脯</td>
+                            <td>24</td>
+                            <td id="a7">10</td>
+                            <td>240</td>
+                            <td>24</td>
+                        </tr>
+                        <tr id="tr8">
+                            <th>8</th>
+                            <td>华为Freebuds4i</td>
+                            <td>479</td>
+                            <td id="a8">10</td>
+                            <td>4790</td>
+                            <td>479</td>
+                        </tr>
+                        <tr id="tr9">
+                            <th>9</th>
+                            <td>荣耀V20手机壳</td>
+                            <td>20</td>
+                            <td id="a9">10</td>
+                            <td>200</td>
+                            <td>20</td>
+                        </tr>
+                        <tr id="tr10">
+                            <th>10</th>
+                            <td>折叠伞</td>
+                            <td>50</td>
+                            <td id="a10">10</td>
+                            <td>500</td>
+                            <td>50</td>
+                        </tr>
+                        <tr id="tr11">
+                            <th>11</th>
+                            <td>毛巾</td>
+                            <td>10</td>
+                            <td id="a11">10</td>
+                            <td>100</td>
+                            <td>10</td>
+                        </tr>
+                        <tr id="tr12">
+                            <th>12</th>
+                            <td>荣耀V20手机</td>
+                            <td>1399</td>
+                            <td id="a12">10</td>
+                            <td>13990</td>
+                            <td>1399</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

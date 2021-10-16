@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./js/ajax.js"></script>
+    <script src="js/cookie.js"></script>
+    <script>
+        window.onload = function(){
+            var oBtn = document.getElementById("btn");
+            var oInputs = document.getElementsByTagName("input");
+            var info = document.getElementById("info");
+
+            oBtn.onclick = function(){
+                $ajax({
+                    method: "post",
+                    url: "./login.php",
+                    data: {
+                        username: oInputs[0].value,
+                        password: oInputs[1].value,
+                        addTime: new Date().getTime()
+                    },
+                    success: function(result){
+                        var obj = JSON.parse(result);
+                        if(obj.code == 6){
+                            info.className = "alert alert-success";
+                            setInterval(function(){
+                                location.assign("backstage.html");
+                            }, 1000);
+                        }else if(obj.code == 5){
+                            info.className = "alert alert-success";
+                            setInterval(function(){
+                                location.assign("index.html");
+                            }, 1000);
+                            var str = oInputs[0].value;
+                            $cookie("username", str);
+                        }else{
+                            info.className = "alert alert-danger";
+                        }
+                        info.style.display = "block";
+                        info.innerHTML = obj.message;
+                    },
+                    error: function(msg){
+                        alert(msg);
+                    }
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div id="title" class="panel-primary">
+            <div class="panel-heading">欢迎登录</div>
+        </div>
+        <form action="#">
+            <div class="form">
+                <input class="form-control" id="input1" type="text" placeholder="用户名">
+                <input class="form-control" id="input2" type="password" placeholder="密码">
+            </div>
+            <div id="info"></div>
+            <div class="login-btn">
+                <a type="button" id="btn" class="btn btn-primary" href="javascript:;">登录</a>
+            </div>
+            <div style="margin-top: -10px;" class="goLogin"><a href="regist.html">去注册</a></div>
+        </form>
+    </div>
+</body>
+</html>

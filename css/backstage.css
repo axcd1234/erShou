@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+.page-main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background: url(../img/background_oeuhe7.jpg) no-repeat;
+    background-size: cover;
+    background-position: right bottom; */
+    background: #f1f1f1;
+    overflow: hidden;
+}
+.page-main .left {
+    width: 200px;
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(15,41,80,1);
+}
+.page-main .left .top-title {
+    width: 170px;
+    height: 50px;
+    padding: 0 15px;
+    background-color: #367fa9;
+    color: #fff;
+    box-sizing: content-box;
+    z-index: 200;
+}
+.page-main .top-title p {
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+.page-main .user {
+    width: 170px;
+    height: 45px;
+    color: #a3b1cc;
+    white-space: nowrap;
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+    background-color: rgba(15,41,80,1);
+    box-sizing: content-box;
+}
+.page-main .img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.page-main .img img {
+    width: 100%;
+    height: 100%;
+}
+.page-main .text {
+    width: 130px;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+.page-main .text .name {
+    font-size: 12px;
+    margin-top: 4px;
+}
+.page-main .text .success {
+    width: 12px;
+    height: 12px;
+    background: #1c84c6;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 29px;
+}
+.page-main .text .two {
+    font-size: 12px;
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 27px;
+}
+.page-main .text .quit {
+    color: red;
+    margin-left: 6px;
+    float: left;
+    position: absolute;
+    left: 50px;
+    top: 23px;
+}
+.page-main .text .three {
+    font-size: 12px;
+    position: absolute;
+    right: 28px;
+    top: 27px;
+    color: #b0b0b0;
+}
+.page-main .nav {
+    width: 200px;
+    background-color: rgba(15,41,80,1);
+}
+.page-main .nav li {
+    width: 100%;
+    height: 38px;
+    position: relative;
+    line-height: 38px;
+}
+.page-main .nav li:first-child {
+    background-color: #1890ff;
+}
+.page-main .nav li:first-child #first {
+    color: rgba(255,255,255,1);
+}
+.page-main .nav li:hover {
+    background-color: #1890ff;
+}
+.page-main .nav li:hover a {
+    color: rgba(255,255,255,1);
+}
+.page-main .nav li:hover .font {
+    color: rgba(255,255,255,1);
+}
+.page-main .nav li a {
+    color: #a3b1cc;
+    display: inline-block;
+    margin-left: 50px;
+}
+.page-main .nav .font {
+    color: #a3b1cc;
+    position: absolute;
+    left: 24px;
+    top: 0;
+    font-size: 14px;
+}
+.page-main .top-list {
+    width: 100%;          /* 如何撑起自适应容器 */
+    height: 50px;
+    background-color: #3c8dbc;
+    position: absolute;
+    top: 0;
+}
+.page-main .top-list .nav-bar {
+    width: 36px;
+    height: 28px;
+    position: absolute;
+    left: 230px;
+    top: 10px;
+}
+.page-main .top-list #btn {
+    width: 36px;
+    height: 28px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    line-height: 28px;
+}
+.page-main .top-list .list {
+    width: 1000px;
+    height: 50px;
+    position: absolute;
+    left: 300px;
+}
+.page-main .top-list .list li {
+    width: 104px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+.page-main .top-list .list li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.page-main .top-list .list .font {
+    color: #fff;
+}
+.page-main .history {
+    width: 100%;
+    height: 39px;
+    position: absolute;
+    top: 50px;
+    background: #fafafa;
+    border-bottom: 1px solid #b0b0b0;
+}
+.page-main .history .left {
+    width: 30px;
+    height: 38px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 38px;
+    color: #999;
+    position: absolute;
+    left: 200px;
+}
+.page-main .history .right {
+    width: 30px;
+    height: 38px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 38px;
+    color: #999;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.page-main .history .list {
+    position: absolute;
+    left: 200px;
+}
+.page-main .history li {
+    width: 58px;
+    height: 38px;
+    background-color: #eaedf1;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    text-align: center;
+    line-height: 38px;
+}
+.page-main .history li a {
+    color: #333;
+}
+.page-main .banner {
+    width: 100%;
+    height: auto;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 210px;
+    top: 170px;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 20%);
+}
+
+.page-main .search {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-radius: 6px;
+    margin-top: 8px;
+    padding-top: 5px;
+    padding-bottom: 13px;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 20%);
+    position: absolute;
+    left: 210px;
+    top: 90px;
+}
+.search .form-inline .title1, .search .form-inline .title2 {
+    font-weight: normal;
+    font-size: 14px;
+}
+.search .form-inline #input1 {
+    position: absolute;
+    left: 84px;
+    top: 0;
+}
+.search .form-inline .title1 {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+}
+.search .form-inline #input2 {
+    position: absolute;
+    left: 380px;
+    top: 12px;
+}
+.search .form-inline .title2 {
+    position: absolute;
+    left: 306px;
+    top: 20px;
+}
+.search .form-inline #btn1 {
+    position: absolute;
+    left: 580px;
+}
+.search .form-inline #btn2 {
+    position: absolute;
+    left: 650px;
+}
+.search #select {
+    width: 300px;
+    height: 60px;
+    position: relative;
+    margin-left: 20px;
+}
+.search .form-group {
+    margin-right: 20px;
+    margin-top: 8px;
+}
+.search .form-inline a {
+    height: 32px;
+    width: 64px;
+    margin-top: 7px;
+    border-radius: 16px;
+    font-weight: 900;
+}
+.search .form-inline #input1, .search .form-inline #input2 {
+    width: 180px;
+}
+
+.banner #operation .new {
+    width: 50px;
+}

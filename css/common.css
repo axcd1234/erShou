@@ -1,0 +1,237 @@
+/* 公共样式 */
+.container {
+    min-width: 1226px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .top-nav {
+    width: 100%;
+    height: 72px;
+    background: linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,0));
+    color: #000;
+    position: relative;
+    z-index: 110;
+}
+.header .top-nav .nav-lt a {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    line-height: 40px;
+    margin-right: 30px;
+}
+.header .top-nav .nav-rg a {
+    color: #fff;
+    margin-left: 10px;
+}
+.header .top-nav .nav-rg .user #u {
+    font-size: 30px;
+    color: #000 ;
+}
+
+.header .top-nav .nav-lt {
+    line-height: 72px;
+    float: left;
+    height: 40px;
+    font-size: 16px;
+}
+.header .nav-rg {
+    display: block;
+}
+.header .userinfo{
+    float: right;
+    height: 72px;
+    position: relative;
+    line-height: 40px;
+    z-index: 100;
+    display: none;
+}
+.header .userinfo .user {
+    width: 110px;
+    position: relative;
+    margin-top: 20px;
+    float: left;
+    white-space: nowrap;
+    padding: 0;
+}
+.header .userinfo .user a {
+    position: relative;
+    display: block;
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    z-index: 30;
+    color: #fff;
+}
+.header .userinfo .user a .name {
+    display: block;
+    width: 110px;
+    max-width: 75px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+}
+.header .userinfo .user a i {
+    width: 6px;
+    height: 6px;
+    border-top: 2px #dedfdf solid;
+    border-right: 2px #dedfdf solid;
+    transform: rotate(135deg);
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+.header .userinfo .user .list {
+    height: 0;
+    width: 110px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 15%);
+    background: #fff;
+    transition-property: height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.header .userinfo .user ul {
+    width: 110px;
+    padding: 6px 0;
+}
+.header .userinfo .user ul li {
+    text-align: center;
+    line-height: 30px;
+}
+.header .userinfo .user ul li a {
+    width: 110px;
+    height: 30px;
+    display: block;
+    color: #424242;
+}
+.header .userinfo .user ul li:hover {
+    background-color: #f5f5f5;
+}
+.header .userinfo .user ul li:hover a {
+    color: #ff6700;
+}
+.header .userinfo .user a:hover {
+    text-decoration: none;
+}
+.header .userinfo .user:hover .list {
+    height: 132px;
+    overflow: auto;
+    overflow: hidden;
+}
+.header .userinfo a:hover {
+    text-decoration: none;
+}
+.header .userinfo .aaa {
+    color: #b0b0b0;
+    font-size: 18px;
+    font-weight: 900;
+}
+.header .userinfo .bbb {
+    padding: 0 10px;
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+}
+.header .userinfo .ccc {
+    padding: 0 5px;
+    display: inline-block;
+    color: #fff;
+}
+.header .userinfo a:hover {
+    color: #fff;
+}
+
+.header .top-nav .nav-lt span {
+    font-size: 18px;
+    color: #b0b0b0;
+    font-weight: 900;
+    margin-left: -12px;
+    padding-right: 16px;
+}
+.header .top-nav .nav-rg span {
+    font-size: 18px;
+    color: #b0b0b0;
+    font-weight: 900;
+    margin-left: 10px;
+}
+.header .top-nav .nav-lt a:hover {
+    text-shadow: 0 0 .5px currentColor,0 0 .5px currentColor,0 0 .5px currentColor,0 0 .5px currentColor;
+    text-decoration: none;
+}
+.header .top-nav .nav-rg {
+    line-height: 72px;
+    float: right;
+    font-size: 16px;
+}
+.header .top-nav .nav-rg #car {
+    position: absolute;
+    right: 300px;
+    top: 0;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+.header .top-nav .nav-rg a:hover {
+    text-decoration: none;
+}
+
+.footer {
+    width: 100%;
+    height: 340px;
+    position: relative;
+}
+.footer:before {
+    z-index: -2;
+    background-image: url(../img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.footer:after, .footer:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.footer:after {
+    background-color: rgba(0,0,0,.8);
+}
+.footer .container {
+    position: relative;
+}
+
+.footer .text {
+    width: 613px;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    font-size: 14px;
+    color: hsla(0,0%,100%,.6);
+    z-index: 100;
+}
+.footer .text .one {
+    margin: 5px 0 -0px 30px;
+}
+.footer .text .two {
+    margin-left: 30px;
+}
+.footer .rg {
+    width: 416px;
+    height: 220px;
+    position: absolute;
+    right: 0;
+    top: 66px;
+    font-size: 12px;
+    line-height: 1;
+    z-index: 100;
+    color: hsla(0,0%,100%,.8);
+}

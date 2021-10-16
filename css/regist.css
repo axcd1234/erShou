@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: url(../img/login-background.f9f49138.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.content {
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.content .title {
+    margin: 20px auto;
+    text-align: center;
+    color: #707070;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+.content .form input {
+    width: 350px;
+    height: 38px;
+    margin: 0 auto;
+}
+.content .form #input1 {
+    margin-bottom: 30px;
+}
+.content .form #input2 {
+    margin-bottom: 30px;
+}
+.content .login-btn {
+    width: 350px;
+    height: 36px;
+    margin: 20px auto;
+}
+.content .login-btn #btn {
+    width: 350px;
+    height: 36px;
+    display: block;
+}
+.content #info {
+    width: 350px;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    margin: -20px auto;
+    margin-bottom: -8px;
+    display: none;
+}
+.content .goLogin {
+    width: 50px;
+    height: 18px;
+    margin: -6px auto;
+}

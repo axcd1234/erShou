@@ -1,0 +1,236 @@
+.banner .photo {
+    background-image: url(../img/banner1.jpg);
+    width: 100%;
+    height: 530px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: -72px;
+}
+.banner .search {
+    position: absolute;
+    left: 30%;
+    top: 200px;
+    width: 600px;
+    height: 70px;
+}
+.banner #search {
+    width: 520px;
+    height: 100%;
+    border: none;
+    opacity: .8;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+}
+.banner .icon {
+    width: 80px;
+    height: 70px;
+    background: #fff;
+    float: right;
+    position: relative;
+    opacity: .8;
+    cursor: pointer;
+}
+.banner .icon #xiangji {
+    position: absolute;
+    font-size: 28px;
+    line-height: 70px;
+}
+.banner .icon span {
+    position: absolute;
+    line-height: 70px;
+    left: 36px;
+    font-weight: 900;
+}
+.banner .icon #sousuo {
+    position: absolute;
+    right: 6px;
+    top: 18px;
+    font-size: 28px;
+    font-weight: 900;
+}
+.page-main {
+    width: 100%;
+    height: 330px;
+    background: #f5f5f5;
+    position: relative;
+}
+.page-main .title {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.page-main .container {
+    position: relative;
+}
+.page-main #prev {
+    width: 20px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    top: 142px;
+    z-index: 100;
+    display: inline-block;
+}
+.page-main #prev img {
+    width: 20px;
+    height: 23px;
+}
+.page-main #next img {
+    width: 20px;
+    height: 23px;
+}
+.page-main #next {
+    width: 20px;
+    height: 23px;
+    position: absolute;
+    right: 0;
+    top: 142px;
+    z-index: 100;
+    display: inline-block;
+}
+.page-main .content {
+    width: 1148px;
+    height: 200px;
+    margin-top: -50px;
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    overflow: hidden;
+}
+.page-main .content #ul {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+.page-main .content .li {
+    width: 363px;
+    height: 200px;
+    margin-right: 28px;
+}
+.page-main .content .img {
+    width: 363px;
+    height: 200px;
+}
+.wares-sort {
+    width: 100%;
+    height: 830px;
+    background: #f5f5f5;
+    padding-top: 20px;
+    margin-top: -40px;
+}
+.wares-sort #MyTabContent {
+    width: 100%;
+    height: 540px;
+}
+.wares-sort .title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.wares-sort .a {
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+}
+.wares-sort .a:hover {
+    text-decoration: none;
+}
+.wares-sort .xxx {
+    width: 100%;
+    height: 540px;
+}
+.wares-sort .xxx .list {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.wares-sort .xxx .list1 {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -32px;
+}
+.wares-sort .xxx .li {
+    width: 228px;
+    height: 262px;
+    padding: 20px 0;
+    background-color: #fff;
+    text-align: center;
+}
+.wares-sort .xxx .li .a:hover {
+    text-decoration: none;
+}
+.wares-sort .xxx .li .img {
+    width: 160px;
+    height: 160px;
+    border: 0;
+}
+.wares-sort .xxx .li .title {
+    margin: 0 10px 2px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+.wares-sort .xxx .li .desc {
+    margin: 8px 10px 4px;
+    height: 18px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.wares-sort .xxx .li .price {
+    text-align: center;
+    color: #ff6700;
+}
+.wares-sort .more {
+    margin: 20px auto;
+    text-align: center;
+    line-height: 34px;
+}
+.wares-sort .more .btn {
+    color: #fff;
+    width: 218px;
+    height: 34px;
+}
+.tag {
+    width: 100%;
+    height: 220px;
+    background: #5dd5c8;
+    margin-bottom: 20px;
+}
+.tag .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+    color: honeydew;
+}
+.tag .div1 {
+    width: 120px;
+    height: 120px;
+    border-radius: 35%;
+    text-align: center;
+    color: honeydew;
+}
+.tag .div1 .h3 {
+    font-size: 26px;
+}
+.tag .box {
+    width: 800px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    margin: 14px auto;
+}

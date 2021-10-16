@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/regist.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./js/ajax.js"></script>
+    <script>
+        window.onload = function(){
+            var oBtn = document.getElementById("btn");
+            var oInputs = document.getElementsByTagName("input");
+            var info = document.getElementById("info");
+
+            oBtn.onclick = function(){
+                $ajax({
+                    method: "post",
+                    url: "./register.php",
+                    data: {
+                        username: oInputs[0].value,
+                        password: oInputs[1].value,
+                        addTime: new Date().getTime()
+                    },
+                    success: function(result){
+                        var obj = JSON.parse(result);
+                        if(obj.code) {
+                            info.className = "alert alert-danger";
+                        }else {
+                            info.className = "alert alert-success";
+                            setInterval(function(){
+                                location.assign("login.html");
+                            }, 1000);
+                        }
+                        info.style.display = "block";
+                        info.innerHTML = obj.message;
+                    },
+                    error: function(msg){
+                        alert(msg);
+                    }
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <form action="#">
+            <h2 class="title">欢迎注册</h2>
+            <div class="form">
+                <input class="form-control" id="input1" type="text" placeholder="用户名">
+                <input class="form-control" id="input2" type="password" placeholder="密码">
+            </div>
+            <div id="info" class="alert alert-danger"></div>
+            <div class="login-btn">
+                <a type="button" id="btn" class="btn btn-primary" href="javascript:;">
+                    注册
+                </a>
+            </div>
+            <div class="goLogin"><a href="./login.html">去登录</a></div>
+        </form>
+    </div>
+</body>
+</html>
